@@ -6,7 +6,7 @@ import { dirname } from 'path';
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const blogPosts = [["My first post", "Et omnis dolor et earum excepturi 33 sunt assumenda et laborum sint et ipsam autem? Et repudiandae explicabo aut magni debitis et distinctio accusamus sed provident dolorem cum quaerat culpa aut totam itaque. Et vero vero quo maxime officia quo illo alias est esse deleniti ut facilis harum."]];
+const blogPosts = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -27,11 +27,15 @@ app.get('/contact', function(req, res) {
 });
 
 app.get('/compose', function(req, res) {  
-    res.render('contact');
+    res.render('compose');
 });
 
-
-app.post('/', function(req, res) {
+app.post('/compose', function(req, res) {
+    const body = req.body;
+    const title = body.title;
+    const content = body.content;
+    blogPosts.push([title, content])
+    res.redirect('/')
 });
 
 app.listen(3000, function() {

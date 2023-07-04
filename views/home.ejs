@@ -24,7 +24,7 @@
                         <%= blogPost[0] %>
                     </h1>
                     <p id="post-content">
-                        <%= blogPost[1] %>
+                        <%= blogPost[1].substring(0, 100) + "..." %><a href="/">Read More</a>
                     </p>
             </div>
             <% } %>

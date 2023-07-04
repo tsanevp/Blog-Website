@@ -42,7 +42,10 @@
 }
 
 
-
+form {
+    display: flex;
+    flex-direction: column;
+}
 
 /* footer {
     position: absolute;
