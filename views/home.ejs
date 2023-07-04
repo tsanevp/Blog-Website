@@ -3,19 +3,21 @@
     <div class="content">
         <div class="content-intro">
             <h1>Home</h1>
-            <p class="section-content"><%= homeStartingContent %></p>
+            <p class="section-content">
+                <%= homeStartingContent %>
+            </p>
         </div>
-        <% for (let i=0; i < blogPosts.length; i++) { %>
+
+        <% blogPosts.forEach(function(post) { %>
             <div class="blog-post">
-                <% let blogPost=blogPosts[i]; %>
-                    <h1 class="section-heading">
-                        <%= blogPost[0] %>
-                    </h1>
-                    <p class="section-content">
-                        <%= blogPost[1].substring(0, 100) + "... " %><a class="post-links" href="/">Read More</a>
-                    </p>
+                <h1 class="section-heading">
+                    <%= post.title %>
+                </h1>
+                <p class="section-content">
+                    <%= post.content.substring(0, 100) + "... " %><a class="post-links" href="/posts/<%= post.title %>">Read More</a>
+                </p>
             </div>
-            <% } %>
+            <% }); %>
     </div>
 
     <%- include("partials/footer") -%>
