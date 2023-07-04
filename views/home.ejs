@@ -1,33 +1,21 @@
-<%- include("header") -%>
+<%- include("partials/header") -%>
 
     <div class="content">
-        <div class="home-intro">
+        <div class="content-intro">
             <h1>Home</h1>
-            <p>
-                Lorem ipsum dolor sit amet. Ea quae mollitia aut quod excepturi qui maxime rerum ad minus temporibus ut
-                aliquam iusto ut corrupti galisum. Rem repellendus internos qui asperiores ducimus ea repellendus maxime
-                et quasi inventore et inventore rerum ut explicabo reiciendis qui corporis aspernatur. Et omnis
-                perferendis non quaerat sapiente est eveniet natus aut maxime molestias ut sunt magni non animi
-                voluptatem aut tempora nihil.Hic incidunt molestias in voluptas sequi At necessitatibus galisum non enim
-                tenetur eos rerum alias At quos libero. Est illo perferendis sit voluptatem quia cum provident debitis
-                eos iusto necessitatibus.In
-                tempore labore et sequi accusantium ea facilis alias. Qui voluptates nihil ut expedita velit sed
-                autem laudantium et saepe optio. Et voluptas nisi sit deserunt labore et corporis omnis qui odit maxime
-                hic neque deleniti nam ullam quisquam non praesentium atque. Sed tempora autem est quia voluptatem non
-                minus eveniet.
-            </p>
+            <p class="section-content"><%= homeStartingContent %></p>
         </div>
         <% for (let i=0; i < blogPosts.length; i++) { %>
             <div class="blog-post">
                 <% let blogPost=blogPosts[i]; %>
-                    <h1 id="post-title">
+                    <h1 class="section-heading">
                         <%= blogPost[0] %>
                     </h1>
-                    <p id="post-content">
-                        <%= blogPost[1].substring(0, 100) + "..." %><a href="/">Read More</a>
+                    <p class="section-content">
+                        <%= blogPost[1].substring(0, 100) + "... " %><a class="post-links" href="/">Read More</a>
                     </p>
             </div>
             <% } %>
     </div>
 
-    <%- include("footer") -%>
+    <%- include("partials/footer") -%>
