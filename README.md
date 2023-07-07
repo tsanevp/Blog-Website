@@ -31,7 +31,7 @@
 
 ### Links
 
-Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev/compose)
+Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev)
 
 ## My process
 
