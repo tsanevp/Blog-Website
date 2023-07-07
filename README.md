@@ -24,14 +24,14 @@
 ### Screenshot
 
 #### Home Page
-<img width="1920" alt="weather app home screen" src="https://github.com/tsanevp/Weather-App/blob/main/public/images/home-page.png">
+<img width="1920" alt="weather app home screen" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/home-page.png">
 
 #### Search Results
-<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Weather-App/blob/main/public/images/search-results.png">
+<img width="1920" alt="weather app search results" src="https://github.com/tsanevp/Blog-Website/blob/main/public/images/compose-blog.png">
 
 ### Links
 
-Live Site URL: [Weather App](https://quiet-water-7642.fly.dev/)
+Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev/compose)
 
 ## My process
 
@@ -49,17 +49,19 @@ Live Site URL: [Weather App](https://quiet-water-7642.fly.dev/)
 
 ### What I learned
 
-- Working with transitions in CSS and replacing text using JS
-- How to communicate and send data between my front & back-end code
+- How to utilize EJS, templating, and layouts to reduce repetitive code
+- How to work with EJS on the server side and send variables to my .ejs pages
 
 ### Continued development
 
-- [ ]  Improve UX and front-end design of the city search page
-- [ ]  Add detailed About page rather than redirecting back to GitHub
+- [ ]  Implement MongoDB to store posts made by users since a new deployment deletes all current posts
+- [ ]  Add a name/date field when composing a blog so we know who posted it and when
+- [ ]  Add registration/sign-in functionality so only registered users can make blog posts
 
 ### Useful resources
 
 - [Express documentation](https://expressjs.com/en/4x/api.html) - Was constantly referring to documentation
+- [EJS documentation](https://ejs.co/) - Was much needed since it was my first time using EJS
 
 ## Author
 
