@@ -8,7 +8,7 @@
 }
 
 .header {
-    position: absolute;
+    position: relative;
     top: 0px;
     width: 100%;
     display: flex;
@@ -17,6 +17,19 @@
     height: 100px;
     padding: 0px 200px;
     background-color: #2C3E50;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: #F5F5F5;
+    margin-top: -50px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
 }
 
 .blog-title {
@@ -33,15 +46,17 @@
 }
 
 .nav-item a:hover {
-    color:#E74C3C;
+    color: #E74C3C;
     transition: .5s;
 }
 
 .content {
-    position: absolute;
-    top: 100px;
+    position: relative;
+    top: 0px;
+    /* margin-top: 100px; */
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
     padding: 50px 200px 0px;
     background-color: #F5F5F5;
 }
@@ -58,19 +73,6 @@
     color: #E74C3C;
 }
 
-/* footer {
-    position: absolute;
-    bottom: 0px;
-    background-color: #2C3E50;
-    margin-top: -100px;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-} */
-
 .footer-item {
     width: 300px
 }
@@ -78,13 +80,6 @@
 .footer-item:nth-child(2) {
     text-align: center;
 }
-    
-    
-/* Primary Color: #2C3E50 (Dark Blue)
-Secondary Color: #F5F5F5 (Light Gray)
-Accent Color 1: #E74C3C (Crimson Red)
-Accent Color 2: #3498DB (Bright Blue)
-Neutral Color: #FFFFFF (White) */
 
 /* Compose page */
 .form-container {
@@ -113,9 +108,10 @@ form {
 textarea {
     height: 200px;
     resize: vertical;
+    max-height: 500px;
 }
 
-#button {
+.button {
     width: 75px;
     height: 30px;
     border: 2px #3498DB solid;
@@ -125,9 +121,56 @@ textarea {
     transition: .5s;
 }
 
-#button:hover {
+.button:hover {
     background-color: #2C3E50;
     font-weight: bold;
     transition: .5s;
 }
 
+/* Contact Page */
+#contact-content {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form {
+    background-color: #FFFFFF;
+    color: #00ADB5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.contact-field {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#contact-intro-msg {
+    width: 360px;
+    text-align: center;
+}
+
+.contact-input {
+    width: 356px;
+    margin-top: 2px;
+    outline: none;
+    resize: none;
+  }
+
+  .contact-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+  }
