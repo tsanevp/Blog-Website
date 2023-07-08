@@ -65,13 +65,16 @@ app.post('/compose', function (req, res) {
 
 app.post('/contact', function (req, res) {
     const { name, emailAddress, message } = req.body;
-    const url = 'https://docs.google.com/forms/d/e/1FAIpQLSfD_i06X6v0rfPi6XydDBKGmUnRQ2AKAku-lm1kDwxKN4TZSA/formResponse?entry.2005620554=' + name + '&entry.1045781291=' + emailAddress + '&entry.1065046570=' + message;
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLSfD_i06X6v0rfPi6XydDBKGmUnRQ2AKAku-lm1'
+        + 'kDwxKN4TZSA/formResponse?entry.2005620554=' + name + '&entry.1045781291='
+        + emailAddress + '&entry.1065046570=' + message;
 
     https.get(url, (response) => {
         let form = '<h1 id="contact-intro-msg">Your Message Was Successfully Sent!</h1>'
 
         if (response.statusCode !== 200) {
-            form = '<h1 id="contact-intro-msg">There Was An Error Contacting Peter. Please Try Again!</h1>'
+            form = '<h1 id="contact-intro-msg">There Was An Error Contacting Peter. '
+                + 'Please Try Again!</h1>'
         }
 
         res.render('contact', { form: form });
