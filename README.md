@@ -20,6 +20,7 @@
 
 - Using EJS effectively to minimize the amount of repetitive HTML code in the project
 - Following proper design when working with EJS templating and layouts
+- Using MongoDB to store posts and then display them
     
 ### Screenshot
 
@@ -44,6 +45,7 @@ Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev)
 - Node.js
 - Express.js
 - EJS
+- MongoDB
 #### Deployed On
 - Fly.io
 
@@ -51,10 +53,11 @@ Live Site URL: [The Thoughtful Pen](https://thethoughtfulpenblog.fly.dev)
 
 - How to utilize EJS, templating, and layouts to reduce repetitive code
 - How to work with EJS on the server side and send variables to my .ejs pages
+- How to connect to a MongoDB database and store/retrieve data inside a Node.js project
 
 ### Continued development
 
-- [ ]  Implement MongoDB to store posts made by users since a new deployment deletes all current posts
+- [x]  Implement MongoDB to store posts made by users since a new deployment deletes all current posts
 - [ ]  Add a name/date field when composing a blog so we know who posted it and when
 - [ ]  Add registration/sign-in functionality so only registered users can make blog posts
 

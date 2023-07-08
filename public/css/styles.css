@@ -7,29 +7,15 @@
     color: #3498DB;
 }
 
+/* Header styling */
 .header {
-    position: relative;
-    top: 0px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100px;
     padding: 0px 200px;
-    background-color: #2C3E50;
-}
-
-footer {
-    position: absolute;
-    bottom: 0px;
-    background-color: #F5F5F5;
-    margin-top: -50px;
-    height: 50px;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
+    align-items: center;
+    background-color: #2C3E50;
 }
 
 .blog-title {
@@ -50,14 +36,13 @@ footer {
     transition: .5s;
 }
 
+/* Body content styling */
 .content {
-    position: relative;
-    top: 0px;
-    /* margin-top: 100px; */
     width: 100%;
-    height: calc(100vh - 100px);
-    overflow-y: hidden;
-    padding: 50px 200px 0px;
+    min-height: calc(100vh - 150px);
+    padding: 50px 200px 50px;
+    overflow-y: auto;
+    overflow-x: auto;
     background-color: #F5F5F5;
 }
 
@@ -69,19 +54,12 @@ footer {
     margin-top: 10px;
 }
 
+/* Home page styling */
 .post-links {
     color: #E74C3C;
 }
 
-.footer-item {
-    width: 300px
-}
-
-.footer-item:nth-child(2) {
-    text-align: center;
-}
-
-/* Compose page */
+/* Compose page styling */
 .form-container {
     margin-top: 20px;
 }
@@ -127,7 +105,7 @@ textarea {
     transition: .5s;
 }
 
-/* Contact Page */
+/* Contact page styling */
 #contact-content {
     padding: 0px;
     display: flex;
@@ -164,13 +142,33 @@ textarea {
     margin-top: 2px;
     outline: none;
     resize: none;
-  }
+}
 
-  .contact-submit-btn {
+.contact-submit-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 40px;
     cursor: pointer;
-  }
+}
+
+/* Footer styling */
+footer {
+    position: sticky;
+    background-color: #F5F5F5;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.footer-item {
+    width: 300px
+}
+
+.footer-item:nth-child(2) {
+    text-align: center;
+}
